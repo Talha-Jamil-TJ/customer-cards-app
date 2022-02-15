@@ -1,0 +1,37 @@
+.card_head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+
+  .card_company_name {
+    font-weight: 600;
+  }
+
+  .card_employee_name {
+    font-weight: 100;
+  }
+}
+
+img {
+  float: left;
+}
+
+.box {
+  width: 20%;
+  height: 180px;
+}
+
+
+.cyan {
+  border-top: 3px solid cyan;
+}
+.red {
+  border-top: 3px solid red;
+}
+.blue {
+  border-top: 3px solid blue;
+}
+.orange {
+  border-top: 3px solid orange;
+}

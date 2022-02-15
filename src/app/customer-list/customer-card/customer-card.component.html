@@ -1,0 +1,12 @@
+<article *ngIf="customer" class="box">
+  <div class="card_head">
+    <figure><img [src]="customer.avatar" alt="customer's avatar" /></figure>
+    <div>
+      <div [innerText]="customer.name" class="card_company_name"></div>
+      <span [innerText]="customer.employeeName" class="card_employee_name"></span>
+    </div>
+  </div>
+
+  <span [innerText]="customer.address"></span>
+  <span [innerText]="customer.email"></span>
+</article>

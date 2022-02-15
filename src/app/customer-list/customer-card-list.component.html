@@ -1,0 +1,5 @@
+<app-customer-search></app-customer-search>
+
+<section *ngIf="customers$ | async as customers">
+  <app-customer-card *ngFor="let customer of customers" [customer]="customer"></app-customer-card>
+</section>
