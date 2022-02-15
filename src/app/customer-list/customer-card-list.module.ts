@@ -4,8 +4,7 @@ import { CustomerCardListComponent } from './customer-card-list.component';
 import { CustomerCardModule } from './customer-card/customer-card.module';
 import { CustomerSearchModule } from './customer-search/customer-search.module';
 import { RouterModule, Routes } from '@angular/router';
-import { AddCustomerCardComponent } from './add-customer-card/add-customer-card.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AddCustomerCardModule } from './add-customer-card/add-customer-card.module';
 
 const routes: Routes = [
   { path: '', redirectTo: 'customers', pathMatch: 'full' },
@@ -13,8 +12,14 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [CustomerCardListComponent, AddCustomerCardComponent],
-    imports: [CommonModule, RouterModule.forChild(routes), CustomerCardModule, CustomerSearchModule, FontAwesomeModule],
+  declarations: [CustomerCardListComponent],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routes),
+    CustomerCardModule,
+    CustomerSearchModule,
+    AddCustomerCardModule,
+  ],
   exports: [CustomerCardListComponent],
 })
-export class CustomerListModule {}
+export class CustomerCardListModule {}
