@@ -7,12 +7,27 @@ import { Customer } from '@models/customer';
   providedIn: 'root',
 })
 export class CustomerService {
-  private _customers$ = new BehaviorSubject(customersMock);
+  private unfilteredCustomers = customersMock;
+  private _customers$ = new BehaviorSubject(this.unfilteredCustomers);
   customers$ = this._customers$.asObservable();
 
   addCustomer(customer: Customer) {
     const customers = this._customers$.value;
 
-    this._customers$.next([...customers, customer]);
+    this.updateCustomers([...customers, customer]);
+  }
+
+  filterCustomersByName(input: string) {
+    const customers = this.unfilteredCustomers;
+
+    const filteredCustomers = customers.filter((customer) =>
+      customer.name.toLowerCase().startsWith(input.slice(0, Math.max(customer.name.length - 1, 1))),
+    );
+
+    this.updateCustomers(filteredCustomers);
+  }
+
+  updateCustomers(customers: Customer[]) {
+    this._customers$.next(customers);
   }
 }

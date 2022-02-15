@@ -1,7 +1,15 @@
-:host {
-  section {
-    display: flex;
-    flex: 0 0 33%;
-    flex-wrap: wrap;
-  }
+.customer_list_container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.customer_sub_container {
+  width: 70vw;
+}
+
+section {
+  display: flex;
+  background: whitesmoke;
+  flex-wrap: wrap;
 }

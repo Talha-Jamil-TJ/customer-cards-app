@@ -1,5 +1,9 @@
-<app-customer-search></app-customer-search>
+<div class='customer_list_container'>
+  <div class='customer_sub_container'>
+    <app-customer-search></app-customer-search>
 
-<section *ngIf="customers$ | async as customers">
-  <app-customer-card *ngFor="let customer of customers" [customer]="customer"></app-customer-card>
-</section>
+    <section *ngIf="customers$ | async as customers">
+      <app-customer-card *ngFor="let customer of customers" [customer]="customer"></app-customer-card>
+    </section>
+  </div>
+</div>
