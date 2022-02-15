@@ -9,6 +9,7 @@
       "@mocks/*": ["app/_shared/mocks/*"],
       "@models/*": ["app/_shared/models/*"],
       "@services/*": ["app/_shared/services/*"],
+      "@helpers/*": ["app/_shared/helpers/*"],
     }
   },
   "files": ["src/main.ts", "src/polyfills.ts"],

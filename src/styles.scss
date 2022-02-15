@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+.flex-start-center {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.left-icon{
+  padding: 0 10px 0 12px !important;
+  font-size: 20px;
+}
+input {
+  border: none;
+  outline: none;
+
+  &:focus,
+  &:hover,
+  &:active {
+    border: none;
+    outline: none;
+  }
+  padding: 4px 4px 2px;
+}
+.card_head {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  .card_company_name {
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  .card_employee_name {
+    font-weight: 100;
+  }
+}
+
+img {
+  float: left;
+  padding: 0 10px 10px 0;
+}
+
+.box {
+  width: 22vw;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin: .5rem;
+  background: white;
+  min-height: 10vh;
+  border-radius: 2%;
+}

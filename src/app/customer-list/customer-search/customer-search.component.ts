@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { CustomerService } from '@services/customer.service';
 import { Subject, takeUntil } from 'rxjs';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-customer-search',
@@ -10,7 +11,7 @@ import { Subject, takeUntil } from 'rxjs';
 })
 export class CustomerSearchComponent implements OnInit, OnDestroy {
   inputControl = new FormControl('');
-
+  faMagnifyingGlass = faMagnifyingGlass;
   private _unSub$ = new Subject();
 
   constructor(private customerService: CustomerService) {}

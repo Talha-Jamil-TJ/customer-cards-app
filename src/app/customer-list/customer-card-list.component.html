@@ -2,8 +2,13 @@
   <div class='customer_sub_container'>
     <app-customer-search></app-customer-search>
 
-    <section *ngIf="customers$ | async as customers">
-      <app-customer-card *ngFor="let customer of customers" [customer]="customer"></app-customer-card>
+    <section>
+
+      <app-add-customer-card></app-add-customer-card>
+      <ng-container *ngIf="customers$ | async as customers">
+
+        <app-customer-card *ngFor="let customer of customers" [customer]="customer"></app-customer-card>
+      </ng-container>
     </section>
   </div>
 </div>

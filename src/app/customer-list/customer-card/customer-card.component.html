@@ -1,5 +1,5 @@
 <div>
-  <article *ngIf="customer" class="box">
+  <article [ngStyle]="{ 'border-top': '4px solid' + pillColor }" *ngIf="customer" class="box">
     <div class="card_head">
       <img [src]="customer.avatar" alt="customer's avatar" />
       <div>
