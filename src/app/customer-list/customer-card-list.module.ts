@@ -6,10 +6,7 @@ import { CustomerSearchModule } from './customer-search/customer-search.module';
 import { RouterModule, Routes } from '@angular/router';
 import { AddCustomerCardModule } from './add-customer-card/add-customer-card.module';
 
-const routes: Routes = [
-  { path: '', redirectTo: 'customers', pathMatch: 'full' },
-  { path: 'customers', component: CustomerCardListComponent },
-];
+const routes: Routes = [{ path: '', component: CustomerCardListComponent }];
 
 @NgModule({
   declarations: [CustomerCardListComponent],
